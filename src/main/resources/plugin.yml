@@ -1,0 +1,11 @@
+name: lightSkills
+version: 1.0-SNAPSHOT
+main: de.lightplugins.skills.master.Main
+api-version: 1.17
+depend: [Vault]
+softdepend: [PlaceholderAPI, WorldGuard]
+loadbefore: []
+commands:
+  jobs:
+    description: "The main command for the plugin"
+    aliases: [ljobs]
