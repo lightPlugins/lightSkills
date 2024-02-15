@@ -29,7 +29,6 @@ public class SkillsOpenCommand extends SubCommand {
         player.setHealthScale(20);
         player.setHealthScaled(true);
         player.getAttribute(Attribute.GENERIC_ATTACK_SPEED).setBaseValue(100);
-
         player.getAttribute(Attribute.GENERIC_ARMOR).setBaseValue(0);
 
         return false;

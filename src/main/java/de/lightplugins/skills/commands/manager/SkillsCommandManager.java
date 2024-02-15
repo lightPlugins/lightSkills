@@ -1,4 +1,4 @@
-package de.lightplugins.skills.commands;
+package de.lightplugins.skills.commands.manager;
 
 import de.lightplugins.skills.commands.skills.SkillsOpenCommand;
 import de.lightplugins.skills.enums.MessagePath;

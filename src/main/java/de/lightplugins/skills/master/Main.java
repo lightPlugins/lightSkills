@@ -1,18 +1,18 @@
 package de.lightplugins.skills.master;
 
 import de.lightplugins.skills.actionbar.ActionBarSender;
-import de.lightplugins.skills.commands.SkillsCommandManager;
-import de.lightplugins.skills.events.ActionBarListener;
+import de.lightplugins.skills.commands.manager.SkillsCommandManager;
+import de.lightplugins.skills.events.defaults.DamageIndicator;
+import de.lightplugins.skills.events.defaults.DisableDurability;
+import de.lightplugins.skills.events.util.ActionBarListener;
 import de.lightplugins.skills.util.ColorTranslation;
 import de.lightplugins.skills.util.FileManager;
 import de.lightplugins.skills.util.Util;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.checkerframework.checker.units.qual.A;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -68,6 +68,8 @@ public class Main extends JavaPlugin {
 
         PluginManager pm = this.getServer().getPluginManager();
         pm.registerEvents(new ActionBarListener(), this);
+        pm.registerEvents(new DisableDurability(), this);
+        pm.registerEvents(new DamageIndicator(), this);
 
     }
 

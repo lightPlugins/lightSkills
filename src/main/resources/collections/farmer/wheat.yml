@@ -1,0 +1,42 @@
+collection:
+  displayName: '&aWeizen'
+  lore:
+    - '&7Farm Weizen'
+    - ' '
+    - '&7Fortschritt für Weizen I: 42/50'
+    - '&a--------------&7-- &a42&5/&a100'
+  tasks:
+    '1':
+      displayName: '&aWeizen Stufe I'
+      lore:
+        - '&7Farme Weizen um die nächste Stufe'
+        - '&7zu erreichen.'
+        - ' '
+        - '&7Fortschritt für Weizen: 42/50'
+        - ''
+      amountToFarm: 50
+      rewards:
+        - 'skyblockexp:4'
+        - 'recipe:generator_wheat'
+    '2':
+      displayName: '&aWeizen Stufe II'
+      lore:
+        - '&7Farme Weizen um die nächste Stufe'
+        - '&7zu erreichen.'
+        - ' '
+        - '&7Fortschritt für Weizen: 47/100'
+        - ''
+      amountToFarm: 100
+      rewards:
+        - 'skyblockexp:4'
+    '3':
+      displayName: '&aWeizen Stufe III'
+      lore:
+        - '&7Farme Weizen um die nächste Stufe'
+        - '&7zu erreichen.'
+        - ' '
+        - '&7Fortschritt für Weizen: 47/250'
+        - ''
+      amountToFarm: 250
+      rewards:
+        - 'skyblockexp:4'
