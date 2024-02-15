@@ -1,15 +1,22 @@
 package de.lightplugins.skills.master;
 
+import de.lightplugins.skills.actionbar.ActionBarSender;
 import de.lightplugins.skills.commands.SkillsCommandManager;
+import de.lightplugins.skills.events.ActionBarListener;
 import de.lightplugins.skills.util.ColorTranslation;
 import de.lightplugins.skills.util.FileManager;
 import de.lightplugins.skills.util.Util;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.checkerframework.checker.units.qual.A;
 
+import java.util.ArrayList;
 import java.util.Objects;
+import java.util.UUID;
 
 public class Main extends JavaPlugin {
 
@@ -20,6 +27,8 @@ public class Main extends JavaPlugin {
     public static Economy econ = null;
     public static ColorTranslation colorTranslation;
     public static Util util;
+
+    public ArrayList<UUID> actionBarInit = new ArrayList<UUID>();
 
     public void onLoad() {
 
@@ -52,10 +61,13 @@ public class Main extends JavaPlugin {
             }
         }
 
-        Objects.requireNonNull(this.getCommand("jobs")).setExecutor(new SkillsCommandManager(this));
+        Objects.requireNonNull(this.getCommand("skills")).setExecutor(new SkillsCommandManager(this));
 
+        ActionBarSender actionBarSender = new ActionBarSender();
+        actionBarSender.startActionBarTimer();
 
-
+        PluginManager pm = this.getServer().getPluginManager();
+        pm.registerEvents(new ActionBarListener(), this);
 
     }
 

@@ -6,6 +6,6 @@ depend: [Vault]
 softdepend: [PlaceholderAPI, WorldGuard]
 loadbefore: []
 commands:
-  jobs:
+  skills:
     description: "The main command for the plugin"
-    aliases: [ljobs]
+    aliases: [sk]
