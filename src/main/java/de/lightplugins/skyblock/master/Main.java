@@ -31,7 +31,7 @@ public class Main extends JavaPlugin {
     public static Util util;
     public static ViewFrame viewFrame;
 
-    public SkillData playerManager = new SkillData();
+    public static SkillData playerManager = new SkillData();
 
     public ArrayList<UUID> actionBarInit = new ArrayList<>();
 

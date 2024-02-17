@@ -45,8 +45,13 @@ public class WriteDefaultSkillData implements Listener {
                 foragingFortune,
                 healthRegen);
 
-        if(!Main.getInstance.playerManager.hasSkillData(uuid)) {
-            Main.getInstance.playerManager.updateSkillData(uuid, skillConstructor);
+        SkillConstructor updateDefense = Main.playerManager.getSkillData(uuid);
+        int currentDefense = updateDefense.getDefense();
+        updateDefense.setDefense(currentDefense + 50);
+        Main.playerManager.updateSkillData(uuid, updateDefense);
+
+        if(!Main.playerManager.hasSkillData(uuid)) {
+            Main.playerManager.updateSkillData(uuid, skillConstructor);
             player.sendMessage("Du bist neu und deine Startwerte wurden in den Cache geschrieben");
             return;
         }
