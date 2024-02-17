@@ -1,4 +1,4 @@
-package de.lightplugins.skills.events.defaults;
+package de.lightplugins.skyblock.events.defaults;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

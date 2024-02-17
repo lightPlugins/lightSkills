@@ -1,6 +1,6 @@
-package de.lightplugins.skills.util;
+package de.lightplugins.skyblock.util;
 
-import de.lightplugins.skills.master.Main;
+import de.lightplugins.skyblock.master.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;

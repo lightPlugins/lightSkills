@@ -1,4 +1,4 @@
-package de.lightplugins.skills.util;
+package de.lightplugins.skyblock.util;
 
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;

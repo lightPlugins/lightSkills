@@ -1,4 +1,4 @@
-package de.lightplugins.skills.util;
+package de.lightplugins.skyblock.util;
 
 import org.bukkit.entity.Player;
 

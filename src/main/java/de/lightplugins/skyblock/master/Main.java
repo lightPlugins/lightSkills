@@ -1,14 +1,16 @@
-package de.lightplugins.skills.master;
+package de.lightplugins.skyblock.master;
 
-import de.lightplugins.skills.actionbar.ActionBarSender;
-import de.lightplugins.skills.commands.manager.SkillsCommandManager;
-import de.lightplugins.skills.events.defaults.DamageIndicator;
-import de.lightplugins.skills.events.defaults.DisableDurability;
-import de.lightplugins.skills.events.util.ActionBarListener;
-import de.lightplugins.skills.inventories.SkillsMainMenu;
-import de.lightplugins.skills.util.ColorTranslation;
-import de.lightplugins.skills.util.FileManager;
-import de.lightplugins.skills.util.Util;
+import de.lightplugins.skyblock.actionbar.ActionBarSender;
+import de.lightplugins.skyblock.commands.manager.SkillsCommandManager;
+import de.lightplugins.skyblock.events.defaults.DamageIndicator;
+import de.lightplugins.skyblock.events.defaults.DisableDurability;
+import de.lightplugins.skyblock.events.util.ActionBarListener;
+import de.lightplugins.skyblock.inventories.SkillsMainMenu;
+import de.lightplugins.skyblock.skills.events.WriteDefaultSkillData;
+import de.lightplugins.skyblock.skills.manager.SkillData;
+import de.lightplugins.skyblock.util.ColorTranslation;
+import de.lightplugins.skyblock.util.FileManager;
+import de.lightplugins.skyblock.util.Util;
 import me.devnatan.inventoryframework.ViewFrame;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
@@ -16,9 +18,7 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.ArrayList;
-import java.util.Objects;
-import java.util.UUID;
+import java.util.*;
 
 public class Main extends JavaPlugin {
 
@@ -31,7 +31,10 @@ public class Main extends JavaPlugin {
     public static Util util;
     public static ViewFrame viewFrame;
 
-    public ArrayList<UUID> actionBarInit = new ArrayList<UUID>();
+    public SkillData playerManager = new SkillData();
+
+    public ArrayList<UUID> actionBarInit = new ArrayList<>();
+
 
     public void onLoad() {
 
@@ -73,6 +76,7 @@ public class Main extends JavaPlugin {
         pm.registerEvents(new ActionBarListener(), this);
         pm.registerEvents(new DisableDurability(), this);
         pm.registerEvents(new DamageIndicator(), this);
+        pm.registerEvents(new WriteDefaultSkillData(), this);
 
         viewFrame = ViewFrame.create(this).with(new SkillsMainMenu()).register();
 

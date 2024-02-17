@@ -1,4 +1,4 @@
-package de.lightplugins.skills.inventories;
+package de.lightplugins.skyblock.inventories;
 
 import me.devnatan.inventoryframework.View;
 import me.devnatan.inventoryframework.ViewConfigBuilder;

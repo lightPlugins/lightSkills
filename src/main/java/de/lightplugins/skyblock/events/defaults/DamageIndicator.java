@@ -1,6 +1,6 @@
-package de.lightplugins.skills.events.defaults;
+package de.lightplugins.skyblock.events.defaults;
 
-import de.lightplugins.skills.master.Main;
+import de.lightplugins.skyblock.master.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.LivingEntity;

@@ -1,6 +1,6 @@
-package de.lightplugins.skills.enums;
+package de.lightplugins.skyblock.enums;
 
-import de.lightplugins.skills.master.Main;
+import de.lightplugins.skyblock.master.Main;
 import org.bukkit.configuration.file.FileConfiguration;
 
 public enum MessagePath {

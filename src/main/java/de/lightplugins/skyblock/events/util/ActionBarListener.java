@@ -1,7 +1,7 @@
-package de.lightplugins.skills.events.util;
+package de.lightplugins.skyblock.events.util;
 
-import de.lightplugins.skills.manager.PlayerManager;
-import de.lightplugins.skills.master.Main;
+import de.lightplugins.skyblock.skills.manager.SkillData;
+import de.lightplugins.skyblock.master.Main;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -20,10 +20,6 @@ public class ActionBarListener implements Listener {
     public void initActionBar(PlayerJoinEvent event) {
         // Get the player who joined
         Player player = event.getPlayer();
-
-        // Create a PlayerManager for the player and load their data
-        PlayerManager playerManager = new PlayerManager(player);
-        playerManager.loadPlayerData();
 
         // Add the player's UUID to the list of initialized action bars if not already present
         if(!Main.getInstance.actionBarInit.contains(player.getUniqueId())) {

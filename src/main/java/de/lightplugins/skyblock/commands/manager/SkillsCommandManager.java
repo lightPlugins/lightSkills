@@ -1,9 +1,9 @@
-package de.lightplugins.skills.commands.manager;
+package de.lightplugins.skyblock.commands.manager;
 
-import de.lightplugins.skills.commands.skills.SkillsOpenCommand;
-import de.lightplugins.skills.enums.MessagePath;
-import de.lightplugins.skills.master.Main;
-import de.lightplugins.skills.util.SubCommand;
+import de.lightplugins.skyblock.commands.skills.SkillsOpenCommand;
+import de.lightplugins.skyblock.enums.MessagePath;
+import de.lightplugins.skyblock.master.Main;
+import de.lightplugins.skyblock.util.SubCommand;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

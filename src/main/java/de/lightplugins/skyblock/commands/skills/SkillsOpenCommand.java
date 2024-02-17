@@ -1,12 +1,9 @@
-package de.lightplugins.skills.commands.skills;
+package de.lightplugins.skyblock.commands.skills;
 
-import de.lightplugins.skills.inventories.SkillsMainMenu;
-import de.lightplugins.skills.master.Main;
-import de.lightplugins.skills.util.SubCommand;
-import org.bukkit.attribute.Attribute;
+import de.lightplugins.skyblock.inventories.SkillsMainMenu;
+import de.lightplugins.skyblock.master.Main;
+import de.lightplugins.skyblock.util.SubCommand;
 import org.bukkit.entity.Player;
-
-import java.util.Objects;
 
 public class SkillsOpenCommand extends SubCommand {
     @Override

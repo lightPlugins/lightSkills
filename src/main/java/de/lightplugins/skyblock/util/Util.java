@@ -1,6 +1,6 @@
-package de.lightplugins.skills.util;
-import de.lightplugins.skills.enums.MessagePath;
-import de.lightplugins.skills.master.Main;
+package de.lightplugins.skyblock.util;
+import de.lightplugins.skyblock.enums.MessagePath;
+import de.lightplugins.skyblock.master.Main;
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;
