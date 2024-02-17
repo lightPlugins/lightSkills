@@ -5,9 +5,11 @@ import de.lightplugins.skills.commands.manager.SkillsCommandManager;
 import de.lightplugins.skills.events.defaults.DamageIndicator;
 import de.lightplugins.skills.events.defaults.DisableDurability;
 import de.lightplugins.skills.events.util.ActionBarListener;
+import de.lightplugins.skills.inventories.SkillsMainMenu;
 import de.lightplugins.skills.util.ColorTranslation;
 import de.lightplugins.skills.util.FileManager;
 import de.lightplugins.skills.util.Util;
+import me.devnatan.inventoryframework.ViewFrame;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
@@ -27,6 +29,7 @@ public class Main extends JavaPlugin {
     public static Economy econ = null;
     public static ColorTranslation colorTranslation;
     public static Util util;
+    public static ViewFrame viewFrame;
 
     public ArrayList<UUID> actionBarInit = new ArrayList<UUID>();
 
@@ -70,6 +73,8 @@ public class Main extends JavaPlugin {
         pm.registerEvents(new ActionBarListener(), this);
         pm.registerEvents(new DisableDurability(), this);
         pm.registerEvents(new DamageIndicator(), this);
+
+        viewFrame = ViewFrame.create(this).with(new SkillsMainMenu()).register();
 
     }
 

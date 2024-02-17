@@ -5,6 +5,11 @@
       <element id="module-output" name="lightSkills" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/slf4j/slf4j-simple/2.0.5/slf4j-simple-2.0.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/me/devnatan/inventory-framework-anvil-input/3.1.0-rc/inventory-framework-anvil-input-3.1.0-rc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/me/devnatan/inventory-framework-api/3.1.0-rc/inventory-framework-api-3.1.0-rc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/me/devnatan/inventory-framework-core/3.1.0-rc/inventory-framework-core-3.1.0-rc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/me/devnatan/inventory-framework-platform-bukkit/3.1.0-rc/inventory-framework-platform-bukkit-3.1.0-rc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/me/devnatan/inventory-framework-platform/3.1.0-rc/inventory-framework-platform-3.1.0-rc.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

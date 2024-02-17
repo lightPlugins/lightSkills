@@ -11,13 +11,9 @@
     <repositories>
 
         <repository>
-            <id>bstats-repo</id>
-            <url>https://repo.bstats.org/repository/maven-public/</url>
-        </repository>
-
-        <repository>
-            <id>spigot-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+            <id>codemc-repo</id>
+            <url>https://repo.codemc.io/repository/maven-public/</url>
+            <layout>default</layout>
         </repository>
 
         <repository>
@@ -31,6 +27,11 @@
         </repository>
 
         <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+
+        <repository>
             <id>dmulloy2-repo</id>
             <url>https://repo.dmulloy2.net/nexus/repository/public/</url>
         </repository>
@@ -41,33 +42,13 @@
         </repository>
 
         <repository>
-            <id>citizens-repo</id>
-            <name>Citizens Repository</name>
-            <url>https://maven.citizensnpcs.co/repo</url>
-        </repository>
-
-        <repository>
             <id>central</id>
             <url>https://repo.maven.apache.org/maven2</url>
-        </repository>
-
-        <repository>
-            <id>fancyplugins-releases</id>
-            <name>FancyPlugins Repository</name>
-            <url>https://repo.fancyplugins.de/releases</url>
         </repository>
 
     </repositories>
 
     <dependencies>
-
-        <dependency>
-            <groupId>net.dv8tion</groupId>
-            <artifactId>JDA</artifactId>
-            <version>5.0.0-beta.13</version>
-        </dependency>
-
-
 
         <dependency>
             <groupId>org.mariadb.jdbc</groupId>
@@ -109,19 +90,6 @@
         </dependency>
 
         <dependency>
-            <groupId>net.citizensnpcs</groupId>
-            <artifactId>citizensapi</artifactId>
-            <version>2.0.33-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.comphenix.protocol</groupId>
-            <artifactId>ProtocolLib</artifactId>
-            <version>5.2.0-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
             <groupId>me.devnatan</groupId>
             <artifactId>inventory-framework-platform-bukkit</artifactId>
             <version>3.1.0-rc</version>
@@ -134,6 +102,11 @@
             <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>de.tr7zw</groupId>
+            <artifactId>item-nbt-api</artifactId>
+            <version>2.12.2</version>
+        </dependency>
 
     </dependencies>
 

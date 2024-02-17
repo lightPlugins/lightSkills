@@ -1,5 +1,7 @@
 package de.lightplugins.skills.commands.skills;
 
+import de.lightplugins.skills.inventories.SkillsMainMenu;
+import de.lightplugins.skills.master.Main;
 import de.lightplugins.skills.util.SubCommand;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.Player;
@@ -24,12 +26,7 @@ public class SkillsOpenCommand extends SubCommand {
 
     @Override
     public boolean perform(Player player, String[] args) {
-
-        Objects.requireNonNull(player.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(100);
-        player.setHealthScale(20);
-        player.setHealthScaled(true);
-        player.getAttribute(Attribute.GENERIC_ATTACK_SPEED).setBaseValue(100);
-        player.getAttribute(Attribute.GENERIC_ARMOR).setBaseValue(0);
+        Main.viewFrame.open(SkillsMainMenu.class, player);
 
         return false;
     }
