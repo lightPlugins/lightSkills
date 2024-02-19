@@ -1,4 +1,4 @@
-package de.lightplugins.skyblock.skills.events;
+package de.lightplugins.skyblock.skills.events.defaults;
 
 
 import de.lightplugins.skyblock.master.Main;
@@ -18,9 +18,13 @@ public class WriteDefaultSkillData implements Listener {
         Player player = event.getPlayer();
         UUID uuid = player.getUniqueId();
 
-        int health = 100;
-        int defense = 100;
-        int speed = 100;
+        player.setHealthScale(20);
+        player.setHealthScaled(true);
+        player.setFoodLevel(20);
+
+        int health = 60;
+        int defense = 1000;
+        int speed = 500;
         int strength = 5;
         int intelligence = 0;
         int criticalChance = 0;
@@ -29,7 +33,7 @@ public class WriteDefaultSkillData implements Listener {
         int miningFortune = 0;
         int farmingFortune = 0;
         int foragingFortune = 0;
-        int healthRegen = 1;
+        int healthRegen = 10;
 
         SkillConstructor skillConstructor = new SkillConstructor(
                 health,
@@ -45,13 +49,14 @@ public class WriteDefaultSkillData implements Listener {
                 foragingFortune,
                 healthRegen);
 
+        /*
         SkillConstructor updateDefense = Main.playerManager.getSkillData(uuid);
         int currentDefense = updateDefense.getDefense();
         updateDefense.setDefense(currentDefense + 50);
         Main.playerManager.updateSkillData(uuid, updateDefense);
-
-        if(!Main.playerManager.hasSkillData(uuid)) {
-            Main.playerManager.updateSkillData(uuid, skillConstructor);
+         */
+        if(!Main.skillData.hasSkillData(uuid)) {
+            Main.skillData.updateSkillData(uuid, skillConstructor);
             player.sendMessage("Du bist neu und deine Startwerte wurden in den Cache geschrieben");
             return;
         }

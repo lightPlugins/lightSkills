@@ -1,4 +1,4 @@
-package de.lightplugins.skyblock.events.util;
+package de.lightplugins.skyblock.skills.actionbar;
 
 import de.lightplugins.skyblock.skills.manager.SkillData;
 import de.lightplugins.skyblock.master.Main;

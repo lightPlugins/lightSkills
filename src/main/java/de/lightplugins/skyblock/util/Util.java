@@ -163,4 +163,13 @@ public class Util {
         double randomPercent = random.nextDouble() * 100;
         return randomPercent <= percent;
     }
+
+    public void sendDebugMessage(String message) {
+        boolean enableDebug = true;
+        if(!enableDebug) {
+            return;
+        }
+
+        System.out.println(Main.consolePrefix + message);
+    }
 }

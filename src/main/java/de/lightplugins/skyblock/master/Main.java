@@ -1,12 +1,14 @@
 package de.lightplugins.skyblock.master;
 
-import de.lightplugins.skyblock.actionbar.ActionBarSender;
+import de.lightplugins.skyblock.skills.actionbar.ActionBarSender;
 import de.lightplugins.skyblock.commands.manager.SkillsCommandManager;
 import de.lightplugins.skyblock.events.defaults.DamageIndicator;
 import de.lightplugins.skyblock.events.defaults.DisableDurability;
-import de.lightplugins.skyblock.events.util.ActionBarListener;
+import de.lightplugins.skyblock.skills.actionbar.ActionBarListener;
 import de.lightplugins.skyblock.inventories.SkillsMainMenu;
-import de.lightplugins.skyblock.skills.events.WriteDefaultSkillData;
+import de.lightplugins.skyblock.skills.apply.ApplyPlayerSkills;
+import de.lightplugins.skyblock.skills.events.defaults.PermFoodLevel;
+import de.lightplugins.skyblock.skills.events.defaults.WriteDefaultSkillData;
 import de.lightplugins.skyblock.skills.manager.SkillData;
 import de.lightplugins.skyblock.util.ColorTranslation;
 import de.lightplugins.skyblock.util.FileManager;
@@ -19,6 +21,7 @@ import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.*;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Main extends JavaPlugin {
 
@@ -31,9 +34,9 @@ public class Main extends JavaPlugin {
     public static Util util;
     public static ViewFrame viewFrame;
 
-    public static SkillData playerManager = new SkillData();
+    public static SkillData skillData = new SkillData();
 
-    public ArrayList<UUID> actionBarInit = new ArrayList<>();
+    public CopyOnWriteArrayList<UUID> actionBarInit = new CopyOnWriteArrayList<>();
 
 
     public void onLoad() {
@@ -77,6 +80,12 @@ public class Main extends JavaPlugin {
         pm.registerEvents(new DisableDurability(), this);
         pm.registerEvents(new DamageIndicator(), this);
         pm.registerEvents(new WriteDefaultSkillData(), this);
+        pm.registerEvents(new PermFoodLevel(), this);
+        pm.registerEvents(new ApplyPlayerSkills(), this);
+
+        /*
+         * Custom Events provided by lightSkyblock
+         */
 
         viewFrame = ViewFrame.create(this).with(new SkillsMainMenu()).register();
 
