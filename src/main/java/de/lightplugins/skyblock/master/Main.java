@@ -11,6 +11,7 @@ import de.lightplugins.skyblock.skills.events.defaults.PermFoodLevel;
 import de.lightplugins.skyblock.skills.events.defaults.WriteDefaultSkillData;
 import de.lightplugins.skyblock.skills.manager.SkillData;
 import de.lightplugins.skyblock.util.ColorTranslation;
+import de.lightplugins.skyblock.util.FileFinder;
 import de.lightplugins.skyblock.util.FileManager;
 import de.lightplugins.skyblock.util.Util;
 import me.devnatan.inventoryframework.ViewFrame;
@@ -29,6 +30,7 @@ public class Main extends JavaPlugin {
     public static final String consolePrefix = "§r[light§cJobs§r] ";
     public static FileManager settings;
     public static FileManager messages;
+    public static FileFinder collections;
     public static Economy econ = null;
     public static ColorTranslation colorTranslation;
     public static Util util;
@@ -43,6 +45,7 @@ public class Main extends JavaPlugin {
 
         settings = new FileManager(this, "settings.yml");
         messages = new FileManager(this, "messages.yml");
+        collections = new FileFinder("plugins/lightSkills/collections/");
 
         colorTranslation = new ColorTranslation();
         util = new Util();
@@ -78,7 +81,6 @@ public class Main extends JavaPlugin {
         PluginManager pm = this.getServer().getPluginManager();
         pm.registerEvents(new ActionBarListener(), this);
         pm.registerEvents(new DisableDurability(), this);
-        pm.registerEvents(new DamageIndicator(), this);
         pm.registerEvents(new WriteDefaultSkillData(), this);
         pm.registerEvents(new PermFoodLevel(), this);
         pm.registerEvents(new ApplyPlayerSkills(), this);
