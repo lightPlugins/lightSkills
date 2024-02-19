@@ -146,8 +146,6 @@ public class Util {
 
     public double subtractPercentage(double originalValue, double percentage) {
 
-        Bukkit.getLogger().log(Level.WARNING, "TEST 1 " + originalValue + " - " + percentage);
-
         if (percentage < 0 || percentage > 100) {
             throw new IllegalArgumentException("Percentage must be between 0 and 100");
         }

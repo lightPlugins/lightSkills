@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.UUID;
 
@@ -22,32 +23,7 @@ public class WriteDefaultSkillData implements Listener {
         player.setHealthScaled(true);
         player.setFoodLevel(20);
 
-        int health = 60;
-        int defense = 1000;
-        int speed = 500;
-        int strength = 5;
-        int intelligence = 0;
-        int criticalChance = 0;
-        int criticalDamage = 0;
-        int luck = 0;
-        int miningFortune = 0;
-        int farmingFortune = 0;
-        int foragingFortune = 0;
-        int healthRegen = 10;
-
-        SkillConstructor skillConstructor = new SkillConstructor(
-                health,
-                defense,
-                speed,
-                strength,
-                intelligence,
-                criticalChance,
-                criticalDamage,
-                luck,
-                miningFortune,
-                farmingFortune,
-                foragingFortune,
-                healthRegen);
+        SkillConstructor skillConstructor = getSkillConstructor();
 
         /*
         SkillConstructor updateDefense = Main.playerManager.getSkillData(uuid);
@@ -61,5 +37,35 @@ public class WriteDefaultSkillData implements Listener {
             return;
         }
         player.sendMessage("Du existierst bereits. Deine aktuellen Skillpunkte werden in den Cache geschrieben");
+    }
+
+    @NotNull
+    private static SkillConstructor getSkillConstructor() {
+        int health = 60;
+        int defense = 1000;
+        int speed = 500;
+        int strength = 5;
+        int intelligence = 0;
+        int criticalChance = 25; // 25% chance
+        int criticalDamage = 5; // 5% extra damage
+        int luck = 0;
+        int miningFortune = 0;
+        int farmingFortune = 0;
+        int foragingFortune = 0;
+        int healthRegen = 10;
+
+        return new SkillConstructor(
+                health,
+                defense,
+                speed,
+                strength,
+                intelligence,
+                criticalChance,
+                criticalDamage,
+                luck,
+                miningFortune,
+                farmingFortune,
+                foragingFortune,
+                healthRegen);
     }
 }
