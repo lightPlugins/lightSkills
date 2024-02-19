@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FileFinder {
-    private String directoryPath;
+    private final String directoryPath;
     private List<File> fileList;
 
     public FileFinder(String directoryPath) {

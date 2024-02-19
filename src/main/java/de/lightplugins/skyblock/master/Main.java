@@ -27,7 +27,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class Main extends JavaPlugin {
 
     public static Main getInstance;
-    public static final String consolePrefix = "§r[light§cJobs§r] ";
+    public static final String consolePrefix = "§r[light§cSkills§r] ";
     public static FileManager settings;
     public static FileManager messages;
     public static FileFinder collections;
@@ -46,6 +46,9 @@ public class Main extends JavaPlugin {
         settings = new FileManager(this, "settings.yml");
         messages = new FileManager(this, "messages.yml");
         collections = new FileFinder("plugins/lightSkills/collections/");
+
+        //  Example files
+        new FileManager(this, "/collections/farmer/wheat.yml");
 
         colorTranslation = new ColorTranslation();
         util = new Util();
