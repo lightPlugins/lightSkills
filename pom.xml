@@ -93,6 +93,7 @@
             <groupId>me.devnatan</groupId>
             <artifactId>inventory-framework-platform-bukkit</artifactId>
             <version>3.1.0-rc</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
@@ -133,6 +134,16 @@
                                     </excludes>
                                 </filter>
                             </filters>
+                            <relocations>
+                                <relocation>
+                                    <pattern>de.tr7zw.2.12.2.nbtapi</pattern>
+                                    <shadedPattern>de.lightplugins.skyblock.nbtapi</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>me.devnatan</pattern>
+                                    <shadedPattern>de.lightplugins.skyblock.invframework</shadedPattern>
+                                </relocation>
+                            </relocations>
                         </configuration>
                     </execution>
                 </executions>

@@ -1,0 +1,22 @@
+item: nether_star custom_model_data:1337 power:1 hide_enchants hide_attributes
+displayName: '&aSkyblock Menu'
+lore:
+  - '&7Öffne dein Skyblock-Menu'
+craftable: false
+recipe:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+baseDamage: 0
+effects:
+  '1':
+    gui:
+      guiName: 'skyblock_menu'
+      action: RIGHT_CLICK
+      conditions: []

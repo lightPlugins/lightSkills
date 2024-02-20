@@ -48,7 +48,7 @@ public class Main extends JavaPlugin {
         collections = new FileFinder("plugins/lightSkills/collections/");
 
         //  Example files
-        new FileManager(this, "/collections/farmer/wheat.yml");
+        new FileManager(this, "collections/farmer/wheat.yml");
 
         colorTranslation = new ColorTranslation();
         util = new Util();

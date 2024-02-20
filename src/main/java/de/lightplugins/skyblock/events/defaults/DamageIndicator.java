@@ -4,10 +4,6 @@ import de.lightplugins.skyblock.master.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.LivingEntity;
-import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
-import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.util.Vector;
 import eu.decentsoftware.holograms.api.DHAPI;
 import eu.decentsoftware.holograms.api.holograms.Hologram;
@@ -29,9 +25,9 @@ public class DamageIndicator {
         List<String> lines = new ArrayList<>();
 
         if(isCritical) {
-            lines.add("§e" + damage + " §6❤");
+            lines.add("§e" + Main.util.finalFormatDouble(damage) + " §6❤");
         } else {
-            lines.add("§c" + damage + " §4❤");
+            lines.add("§c" + Main.util.finalFormatDouble(damage) + " §4❤");
         }
 
         Hologram hologram = DHAPI.createHologram(randomUUID, damageIndicatorLocation, lines);

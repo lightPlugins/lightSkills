@@ -84,16 +84,16 @@ public class ApplyPlayerSkills implements Listener {
                 SkillConstructor skillConstructor = Main.skillData.getSkillData(uuid);
                 double critDamagePercent = skillConstructor.getCriticalDamage() / 100.0;    // 50 -> 0,5%
                 double critChancePercent = skillConstructor.getCriticalChance();            // 1 -> 1% - 50 -> 50%
+                double damage = event.getDamage();
 
                 if(Main.util.checkPercentage(critChancePercent)) {
-                    event.setDamage(event.getDamage() * critDamagePercent);
+                    damage += event.getDamage() * critDamagePercent;
                     isCritical = true;
-
                 }
 
                 if(event.getEntity() instanceof LivingEntity enemy) {
                     DamageIndicator damageIndicator = new DamageIndicator();
-                    damageIndicator.createDamageIndicator(enemy, event.getDamage(), isCritical);
+                    damageIndicator.createDamageIndicator(enemy, damage, isCritical);
                 }
             }
         }
