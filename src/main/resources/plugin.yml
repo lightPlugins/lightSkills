@@ -9,3 +9,5 @@ commands:
   skills:
     description: "The main command for the plugin"
     aliases: [sk]
+libraries:
+  - me.devnatan:inventory-framework-platform-paper:3.1.0-rc
